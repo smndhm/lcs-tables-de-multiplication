@@ -1,41 +1,60 @@
-var tables = [3, 4, 5, 6, 7, 8, 9];
-var nombres = [3, 4, 5, 6, 7, 8, 9];
+// Tables de multiplication
+const tables = [3, 4, 5, 6, 7, 8, 9];
 
-var tempsCalcul = 10;
-var tempsReponse = 5;
+// Facteurs
+const facteurs = [3, 4, 5, 6, 7, 8, 9];
 
+// Temps
+const tempsCalcul = 3;
+const tempsReponse = 3;
+
+/**
+ * Retourne au hasard une des valeurs de la liste
+ * @param {*} liste
+ */
 function choisirDansListe(liste) {
   return liste[Math.floor(Math.random() * liste.length)];
 }
 
-function calcul(operation) {
-  return operation.table * operation.nombre;
+/**
+ * Attend # seconde(s) avant de passer à l'étape suivante
+ * @param {*} nombreDeSecondes
+ */
+function attendre(nombreDeSecondes) {
+  return new Promise(function(res) {
+    setTimeout(res, nombreDeSecondes * 1000);
+  });
 }
 
-function afficherOperation(operation) {
-  var texteOperation = `${operation.table} x ${operation.nombre}`;
-  console.log(texteOperation);
-  document.querySelector("#operation").innerHTML = texteOperation;
+/**
+ * Création de l'opération
+ */
+async function faireOperations() {
+  do {
+    // On sélectionne une table au hasard
+    const table = choisirDansListe(tables);
+    // On sélectionne un facteur au hasard
+    const facteur = choisirDansListe(facteurs);
+    // On affiche l'opération
+    document.querySelector("#calcul .table").innerHTML = table;
+    document.querySelector("#calcul .facteur").innerHTML = facteur;
+    document.querySelector("#calcul .resultat").innerHTML = table * facteur;
+    // On attend # secondes
+    await attendre(tempsCalcul);
+    // On affiche le résultat
+    document
+      .querySelector("#calcul .calcul__resultat")
+      .classList.add("montrer");
+    // On attend # secondes
+    await attendre(tempsReponse);
+    // On cache le résultat avant de recommencer
+    document
+      .querySelector("#calcul .calcul__resultat")
+      .classList.remove("montrer");
+  } while (true); // on recommence :)
 }
 
-function afficherResultat(resultat) {
-  console.log(resultat);
-  document.querySelector("#resultat").innerHTML = resultat;
-}
-
-function creerOperation() {
-  var operation = {
-    table: choisirDansListe(tables),
-    nombre: choisirDansListe(nombres)
-  };
-  afficherOperation(operation);
-  var resultat = calcul(operation);
-  setTimeout(function() {
-    afficherResultat(resultat);
-    setTimeout(function() {
-      creerOperation();
-    }, tempsReponse * 1000);
-  }, tempsCalcul * 1000);
-}
-
-creerOperation();
+// Demarrer quand le contenu de la page est chargée
+document.addEventListener("DOMContentLoaded", () => {
+  faireOperations();
+});
