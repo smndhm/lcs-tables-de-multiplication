@@ -23,6 +23,10 @@ function choisirDansListe(liste) {
 function attendre(nombreDeSecondes) {
   return new Promise(function(res) {
     setTimeout(res, nombreDeSecondes * 1000);
+    // On arrête d'attendre si l'on clic, utilise le clavier ou touche l'écran
+    document.addEventListener("mousedown", res, true);
+    document.addEventListener("keydown", res, true);
+    // document.addEventListener("touchstart", res, true); semblerait que toucher l'écran déclanche un clic...
   });
 }
 
