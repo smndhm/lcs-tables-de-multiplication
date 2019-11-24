@@ -14,9 +14,15 @@ https://smndhm.github.io/lcs-tables-de-multiplication/
 - on attend # secondes
 - on recommence :)
 
-### TODO
+## A faire
 
 - [ ] afficher le _timer_ pour répondre et avant prochaine question
-- [ ] arrêter les _timers_ sur événement souris, touché, clavier
+- [x] arrêter les _timers_ sur événement souris, touché, clavier
 - [x] racourcis accueil
 - [x] plein écran
+- [x] thème sombre
+
+## Idées
+
+- [ ] reconnaissance vocale !
+- [ ] notifications ?

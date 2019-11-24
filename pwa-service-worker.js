@@ -17,14 +17,22 @@
  */
 "use strict";
 
-const CACHE_NAME = "static-cache-v1";
+const CACHE_NAME = "static-cache-v2";
 
-const FILES_TO_CACHE = ["./index.html"];
+const FILES_TO_CACHE = [
+  "./index.html",
+  "./multiplication.js",
+  "./icons/icon-128x128.png",
+  "./icons/icon-144x144.png",
+  "./icons/icon-152x152.png",
+  "./icons/icon-192x192.png",
+  "./icons/icon-256x256.png",
+  "./icons/icon-512x512.png"
+];
 
 self.addEventListener("install", evt => {
   evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      console.log("[ServiceWorker] Pre-caching offline page");
       return cache.addAll(FILES_TO_CACHE);
     })
   );
@@ -37,7 +45,6 @@ self.addEventListener("activate", evt => {
       return Promise.all(
         keyList.map(key => {
           if (key !== CACHE_NAME) {
-            console.log("[ServiceWorker] Removing old cache", key);
             return caches.delete(key);
           }
         })
@@ -53,9 +60,9 @@ self.addEventListener("fetch", evt => {
     return;
   }
   evt.respondWith(
-    fetch(evt.request).catch(() => {
-      return caches.open(CACHE_NAME).then(cache => {
-        return cache.match("index.html");
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(evt.request).then(response => {
+        return response || fetch(evt.request);
       });
     })
   );
