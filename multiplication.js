@@ -5,8 +5,8 @@ const tables = [3, 4, 5, 6, 7, 8, 9];
 const facteurs = [3, 4, 5, 6, 7, 8, 9];
 
 // Temps
-const tempsCalcul = 3;
-const tempsReponse = 3;
+const secondesPourCalculer = 6;
+const secondesVoirReponse = 3;
 
 /**
  * Retourne au hasard une des valeurs de la liste
@@ -40,13 +40,13 @@ async function faireOperations() {
     document.querySelector("#calcul .facteur").innerHTML = facteur;
     document.querySelector("#calcul .resultat").innerHTML = table * facteur;
     // On attend # secondes
-    await attendre(tempsCalcul);
+    await attendre(secondesPourCalculer);
     // On affiche le résultat
     document
       .querySelector("#calcul .calcul__resultat")
       .classList.add("montrer");
     // On attend # secondes
-    await attendre(tempsReponse);
+    await attendre(secondesVoirReponse);
     // On cache le résultat avant de recommencer
     document
       .querySelector("#calcul .calcul__resultat")
