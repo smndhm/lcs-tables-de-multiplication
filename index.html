@@ -5,14 +5,58 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calcul mental</title>
+  <title>✖️ Tables de multiplication</title>
   <meta name="Description" content="" />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Titillium+Web:700&display=swap');
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-sizing: border-box;
+
+      text-align: center;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+    #calcul {
+      display: flex;
+      justify-content: center;
+
+      font-size: 24vw;
+    }
+
+    #calcul .calcul__resultat {
+      opacity: 0;
+      transition: flex 250ms ease-out, opacity 0s;
+      width: auto;
+      flex: 0;
+      overflow: hidden;
+    }
+
+    #calcul .calcul__resultat.montrer {
+      flex: 1;
+      opacity: 1;
+      transition: flex 250ms ease-out, opacity 250ms ease-out 250ms;
+    }
+  </style>
+  <script src="./multiplication.js"></script>
 </head>
 
 <body>
-  <div id="operation"></div>
-  <div id="resultat"></div>
-  <script src="./multiplication.js"></script>
+  <div id="timer"></div>
+  <div id="calcul">
+    <span class="table"></span>×<span class="facteur"></span><span class="calcul__resultat">=<span
+        class="resultat"></span></span>
+  </div>
 </body>
 
 </html>
