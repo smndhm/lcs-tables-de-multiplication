@@ -58,3 +58,12 @@ async function faireOperations() {
 document.addEventListener("DOMContentLoaded", () => {
   faireOperations();
 });
+
+// On permet d'installer l'application
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./pwa-service-worker.js").then(reg => {
+      console.log("Service worker registered.", reg);
+    });
+  });
+}
