@@ -2,6 +2,8 @@
 
 Programme permettant de s'entrainer aux tables de multiplication.
 
+https://smndhm.github.io/lcs-tables-de-multiplication/
+
 ## Principe
 
 - on sélectionne une table au hasard
@@ -16,3 +18,5 @@ Programme permettant de s'entrainer aux tables de multiplication.
 
 - [ ] afficher le _timer_ pour répondre et avant prochaine question
 - [ ] arrêter les _timers_ sur événement souris, touché, clavier
+- [x] racourcis accueil
+- [x] plein écran
