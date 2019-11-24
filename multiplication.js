@@ -12,28 +12,28 @@ const secondesVoirReponse = 3;
  * Retourne au hasard une des valeurs de la liste
  * @param {*} liste
  */
-function choisirDansListe(liste) {
+const choisirDansListe = liste => {
   return liste[Math.floor(Math.random() * liste.length)];
-}
+};
 
 /**
  * Attend # seconde(s) avant de passer à l'étape suivante
  * @param {*} nombreDeSecondes
  */
-function attendre(nombreDeSecondes) {
-  return new Promise(function(res) {
-    setTimeout(res, nombreDeSecondes * 1000);
+const attendre = nombreDeSecondes => {
+  return new Promise(resoudre => {
+    setTimeout(resoudre, nombreDeSecondes * 1000);
     // On arrête d'attendre si l'on clic, utilise le clavier ou touche l'écran
-    document.addEventListener("mousedown", res, true);
-    document.addEventListener("keydown", res, true);
-    // document.addEventListener("touchstart", res, true); semblerait que toucher l'écran déclanche un clic...
+    document.addEventListener("mousedown", resoudre, true);
+    document.addEventListener("keydown", resoudre, true);
+    // document.addEventListener("touchstart", resoudre, true); semblerait que toucher l'écran déclanche un clic...
   });
-}
+};
 
 /**
  * Création de l'opération
  */
-async function faireOperations() {
+const faireOperations = async () => {
   do {
     // On sélectionne une table au hasard
     const table = choisirDansListe(tables);
@@ -46,17 +46,13 @@ async function faireOperations() {
     // On attend # secondes
     await attendre(secondesPourCalculer);
     // On affiche le résultat
-    document
-      .querySelector("#calcul .calcul__resultat")
-      .classList.add("montrer");
+    document.body.classList.add("afficher-reponse");
     // On attend # secondes
     await attendre(secondesVoirReponse);
     // On cache le résultat avant de recommencer
-    document
-      .querySelector("#calcul .calcul__resultat")
-      .classList.remove("montrer");
+    document.body.classList.remove("afficher-reponse");
   } while (true); // on recommence :)
-}
+};
 
 // Demarrer quand le contenu de la page est chargée
 document.addEventListener("DOMContentLoaded", () => {
@@ -66,8 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // On permet d'installer l'application
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./pwa-service-worker.js").then(reg => {
-      console.log("Service worker registered.", reg);
-    });
+    navigator.serviceWorker.register("./pwa-service-worker.js");
   });
 }

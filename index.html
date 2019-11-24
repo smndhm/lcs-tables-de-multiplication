@@ -29,6 +29,9 @@
       position: relative;
       box-sizing: border-box;
 
+      background: #ffffff;
+      color: #000000;
+
       text-align: center;
       font-family: 'Titillium Web', sans-serif;
     }
@@ -38,6 +41,7 @@
       justify-content: center;
 
       font-size: 24vw;
+      user-select: none;
     }
 
     #calcul .calcul__resultat {
@@ -48,17 +52,24 @@
       overflow: hidden;
     }
 
-    #calcul .calcul__resultat.montrer {
+    .afficher-reponse #calcul .calcul__resultat {
       flex: 1;
       opacity: 1;
       transition: flex 250ms ease-out, opacity 250ms ease-out 250ms;
+    }
+
+    /* Thème sombre */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #000000;
+        color: #ffffff;
+      }
     }
   </style>
   <script src="./multiplication.js"></script>
 </head>
 
 <body>
-  <div id="timer"></div>
   <div id="calcul">
     <span class="table"></span>×<span class="facteur"></span><span class="calcul__resultat">=<span
         class="resultat"></span></span>
