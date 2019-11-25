@@ -1,8 +1,7 @@
 # Tables de multiplication
 
-Programme permettant de s'entrainer aux tables de multiplication.
-
-https://smndhm.github.io/lcs-tables-de-multiplication/
+L'idée était de faire découvrir la programmation à mon fils aîné avec un programme plutôt simple.  
+En ce moment il apprend les tables de multiplication, du coup on a fait un programme pour qu'il s'entraine : https://smndhm.github.io/lcs-tables-de-multiplication/
 
 ## Principe
 
@@ -13,16 +12,3 @@ https://smndhm.github.io/lcs-tables-de-multiplication/
 - on affiche le résultat
 - on attend # secondes
 - on recommence :)
-
-## A faire
-
-- [ ] afficher le _timer_ pour répondre et avant prochaine question
-- [x] arrêter les _timers_ sur événement souris, touché, clavier
-- [x] racourcis accueil
-- [x] plein écran
-- [x] thème sombre
-
-## Idées
-
-- [ ] reconnaissance vocale !
-- [ ] notifications ?
