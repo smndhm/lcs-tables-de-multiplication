@@ -52,10 +52,37 @@
       overflow: hidden;
     }
 
-    .afficher-reponse #calcul .calcul__resultat {
+    .afficher-resultat #calcul .calcul__resultat {
       flex: 1;
       opacity: 1;
       transition: flex 250ms ease-out, opacity 250ms ease-out 250ms;
+    }
+
+    /* Timer */
+    #timer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      border-bottom: 2px solid;
+
+      animation-name: tempsQuiAvance;
+      animation-timing-function: linear;
+    }
+
+    .afficher-resultat #timer {
+      animation-direction: reverse;
+    }
+
+    @keyframes tempsQuiAvance {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
     }
 
     /* Thème sombre */

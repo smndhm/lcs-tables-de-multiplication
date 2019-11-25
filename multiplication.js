@@ -20,14 +20,24 @@ const choisirDansListe = liste => {
  * Attend # seconde(s) avant de passer à l'étape suivante
  * @param {*} nombreDeSecondes
  */
-const attendre = nombreDeSecondes => {
-  return new Promise(resoudre => {
+const attendre = async nombreDeSecondes => {
+  // Afficher timer
+  const timer = document.createElement("div");
+  timer.id = "timer";
+  timer.style = `animation-duration: ${nombreDeSecondes}s`;
+  document.body.appendChild(timer);
+  // Timer
+  await new Promise(resoudre => {
     setTimeout(resoudre, nombreDeSecondes * 1000);
     // On arrête d'attendre si l'on clic, utilise le clavier ou touche l'écran
     document.addEventListener("mousedown", resoudre, true);
     document.addEventListener("keydown", resoudre, true);
     // document.addEventListener("touchstart", resoudre, true); semblerait que toucher l'écran déclanche un clic...
   });
+  // Supprimer timer
+  timer.parentNode.removeChild(timer);
+  // On sort
+  return;
 };
 
 /**
@@ -46,11 +56,11 @@ const faireOperations = async () => {
     // On attend # secondes
     await attendre(secondesPourCalculer);
     // On affiche le résultat
-    document.body.classList.add("afficher-reponse");
+    document.body.classList.add("afficher-resultat");
     // On attend # secondes
     await attendre(secondesVoirReponse);
     // On cache le résultat avant de recommencer
-    document.body.classList.remove("afficher-reponse");
+    document.body.classList.remove("afficher-resultat");
   } while (true); // on recommence :)
 };
 
