@@ -1,15 +1,20 @@
-## Mumtiplication
+## Multiplication
 
-Qu'est-ce qu'une multiplication ? Que faut il pour faire une multiplication ? [Wikipédia](https://fr.wikipedia.org/wiki/Multiplication)
+Qu'est-ce qu'une multiplication ? Que faut il pour en faire une ? Qu'obtient-on ? [Wikipédia](https://fr.wikipedia.org/wiki/Multiplication)
 
-> Deux nombres (entiers), un resultat.
+> Deux nombres, un resultat.
 
-Un table, un facteur, un produit.
+Trois nombres ?
+
+> Un table, un facteur, un produit.
 
 ## Variable
 
 Qu'est-ce qu'une variable ? [Wikipédia](https://fr.wikipedia.org/wiki/Variable_(informatique))
 
+> En informatique, les variables sont des symboles qui associent un nom (l'identifiant) à une valeur.
+
+`nombre = 5`
 
 ## Développement
 
