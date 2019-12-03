@@ -16,27 +16,26 @@ Qu'est-ce qu'une variable ? [Wikipédia](https://fr.wikipedia.org/wiki/Variable_
 
 > En informatique, les variables sont des symboles qui associent un nom (l'identifiant) à une valeur.
 
-`nombre = 5`
+`nombre = 5`  
+`table = 7`
 
 ## Développement
 
 ```javascript
-// Premier exemple - Ecrire multiplication
-console.log('#1', 3 * 4)
-
-// Second exemple - Stocker le résultat dans une variable
-var resultat = 5 * 4
-console.log('#2', resultat)
-
-// Troisième exemple - Mettre les nombres dans des variables
+// Premier exemple - Mettre les nombres dans des variables
 var nombre1 = 6
 var nombre2 = 8
-var resultat = nombre1 * nombre2
-console.log('#3', resultat)
+console.log('nombre1', nombre1) // nombre1 6
+console.log('nombre2', nombre2) // nombre2 8
 
-// Quatrième exemple - Utiliser des noms de variable corrects
+// Suite premier exemple - Mettre le resultat dans une variable
+var resultat = nombre1 * nombre2
+console.log('resultat', resultat) // resultat 48
+
+
+// Second exemple - Utiliser des noms de variable corrects
 var table = 8
 var facteur = 7
 var produit = table * facteur
-console.log('#4', produit)
+console.log(`${table} x ${facteur} = ${produit}`) // 8 x 7 = 56
 ```
