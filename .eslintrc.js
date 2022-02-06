@@ -3,7 +3,13 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:vue/vue3-essential", "eslint:recommended", "@vue/prettier"],
+  plugins: ["vuejs-accessibility"],
+  extends: [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/prettier",
+    "plugin:vuejs-accessibility/recommended",
+  ],
   parserOptions: {
     parser: "babel-eslint",
   },
@@ -13,10 +19,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
+      files: ["**/tests/*.spec.js"],
       env: {
         jest: true,
       },

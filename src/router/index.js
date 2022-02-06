@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/Home/Home.vue";
 
 const routes = [
   {
@@ -10,7 +10,7 @@ const routes = [
   {
     path: "/multiplications",
     name: "Multiplications",
-    component: () => import("../views/Multiplications.vue"),
+    component: () => import("../views/Multiplications/Multiplications.vue"),
   },
 ];
 

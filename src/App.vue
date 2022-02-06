@@ -4,26 +4,26 @@
 
 <style lang="scss">
 @font-face {
-  font-family: 'Titillium Web';
+  font-family: "Titillium Web";
   font-weight: 400;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local('Titillium Web'),
-    url('/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+  src: local("Titillium Web"),
+    url("/fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Titillium Web';
+  font-family: "Titillium Web";
   font-weight: 700;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local('Titillium Web'),
-    url('/fonts/TitilliumWeb-Bold.ttf') format('truetype');
+  src: local("Titillium Web"),
+    url("/fonts/TitilliumWeb-Bold.ttf") format("truetype");
 }
 
-@import '~normalize.css';
+@import "~normalize.css";
 *,
 *:before,
 *:after {
@@ -43,9 +43,9 @@ body {
 }
 
 body {
-  font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-size: var(--font-size);
   line-height: var(--line-height);
   text-align: center;
@@ -95,7 +95,7 @@ body {
   border-radius: 1.5em;
   text-decoration: none;
   display: inline-block;
-  &.brn--disabled {
+  &.btn--disabled {
     opacity: 0.5;
     pointer-events: none;
   }

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multiplications.vue Should renders view 1`] = `
+<main>
+  <div role="timer" style="animation-duration: 6s; animation-direction: normal;"><span class="sr-only">6</span></div>
+  <div class="operation">8×7<span class="result">=56</span></div>
+</main>
+`;
+
+exports[`Multiplications.vue Should renders view 2`] = `
+<main>
+  <div role="timer" style="animation-duration: 3s; animation-direction: reverse;"><span class="sr-only">3</span></div>
+  <div class="operation operation--display-result">8×7<span class="result">=56</span></div>
+</main>
+`;

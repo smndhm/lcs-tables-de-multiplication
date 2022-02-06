@@ -1,15 +1,15 @@
 <template>
-  <div
-    v-if="timer"
-    role="timer"
-    :style="{
-      'animation-duration': `${time}s`,
-      'animation-direction': displayResult ? 'reverse' : 'normal',
-    }"
-  >
-    <span class="sr-only">{{ timer }}</span>
-  </div>
   <main>
+    <div
+      v-if="timer"
+      role="timer"
+      :style="{
+        'animation-duration': `${time}s`,
+        'animation-direction': displayResult ? 'reverse' : 'normal',
+      }"
+    >
+      <span class="sr-only">{{ timer }}</span>
+    </div>
     <div
       class="operation"
       :class="{ 'operation--display-result': displayResult }"
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'Multiplications',
+  name: "Multiplications",
   data() {
     return {
       factors: [2, 3, 4, 5, 6, 7, 8, 9],
@@ -52,22 +52,22 @@ export default {
           }
         }, 1000);
         document.addEventListener(
-          'mouseup',
+          "mouseup",
           () => {
             this.timer = 0;
             clearInterval(this.interval);
             resolve();
           },
-          true,
+          true
         );
         document.addEventListener(
-          'keyup',
+          "keyup",
           () => {
             this.timer = 0;
             clearInterval(this.interval);
             resolve();
           },
-          true,
+          true
         );
       });
     },
@@ -86,7 +86,7 @@ export default {
       }
       // end
       this.$router.push({
-        name: 'Home',
+        name: "Home",
       });
     },
   },
@@ -145,7 +145,7 @@ export default {
   transition: flex 250ms ease-out, opacity 250ms ease-out 250ms;
 }
 
-[role='timer'] {
+[role="timer"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -157,7 +157,7 @@ export default {
   animation-timing-function: linear;
 }
 
-.afficher-resultat [role='timer'] {
+.afficher-resultat [role="timer"] {
   animation-direction: reverse;
 }
 @keyframes timerProgress {

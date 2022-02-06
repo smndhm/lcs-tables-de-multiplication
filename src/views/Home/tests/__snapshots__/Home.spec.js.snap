@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue Should renders view 1`] = `
+<header>
+  <h1>multiplication</h1>
+</header>
+<main>
+  <fieldset>
+    <legend>home.legend</legend>
+    <ul>
+      <li><label for="table-2"><input type="checkbox" id="table-2" name="table" value="2"><span>2</span></label></li>
+      <li><label for="table-3"><input type="checkbox" id="table-3" name="table" value="3"><span>3</span></label></li>
+      <li><label for="table-4"><input type="checkbox" id="table-4" name="table" value="4"><span>4</span></label></li>
+      <li><label for="table-5"><input type="checkbox" id="table-5" name="table" value="5"><span>5</span></label></li>
+      <li><label for="table-6"><input type="checkbox" id="table-6" name="table" value="6"><span>6</span></label></li>
+      <li><label for="table-7"><input type="checkbox" id="table-7" name="table" value="7"><span>7</span></label></li>
+      <li><label for="table-8"><input type="checkbox" id="table-8" name="table" value="8"><span>8</span></label></li>
+      <li><label for="table-9"><input type="checkbox" id="table-9" name="table" value="9"><span>9</span></label></li>
+      <li><label for="table-all"><input type="checkbox" id="table-all"><span>home.all</span></label></li>
+    </ul>
+  </fieldset>
+</main>
+<footer>
+  <router-link class="btn btn--disabled" to="[object Object]">home.start</router-link>
+</footer>
+`;
