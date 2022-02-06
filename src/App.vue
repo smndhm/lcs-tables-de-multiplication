@@ -2,6 +2,15 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  name: "App",
+  mounted() {
+    document.documentElement.lang = this.$i18n.locale;
+  },
+};
+</script>
+
 <style lang="scss">
 @font-face {
   font-family: "Titillium Web";
