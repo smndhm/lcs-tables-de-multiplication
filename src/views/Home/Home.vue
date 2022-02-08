@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ $t("multiplication") }}</h1>
+    <h1>{{ $t("home.title") }}</h1>
   </header>
   <main>
     <fieldset>

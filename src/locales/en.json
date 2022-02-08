@@ -1,8 +1,8 @@
 {
-  "multiplication": "Multiplications",
   "home": {
+    "title": "Multiplications",
     "legend": "Select the table(s) you would like to review:",
     "all": "All",
-    "start": "Start",
+    "start": "Start"
   }
 }

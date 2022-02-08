@@ -26,7 +26,9 @@ function loadLocaleMessages() {
 export default createI18n({
   legacy: false,
   globalInjection: true,
-  locale: navigator.language || "en",
+  locale: ["en", "fr"].includes(navigator.language.split("-")[0])
+    ? navigator.language.split("-")[0]
+    : "en",
   fallbackLocale: "en",
   messages: loadLocaleMessages(),
 });
