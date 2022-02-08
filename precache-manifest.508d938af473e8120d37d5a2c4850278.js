@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fonts/TitilliumWeb-Regular.ttf"
   },
   {
-    "revision": "e790d8972f63c76befb16559f6e295ab",
+    "revision": "7e1ea414040d74fb7c5cc243820582c9",
     "url": "/index.html"
   },
   {
@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-vendors.3eacbbf5.js"
   },
   {
-    "revision": "5a9014c134ff6fafdd16530c91c9cbc6",
+    "revision": "fd498bed617003abd7c45b9d6e07e3f6",
     "url": "/manifest.json"
   },
   {
