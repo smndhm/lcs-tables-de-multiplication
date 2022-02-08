@@ -11,6 +11,9 @@ module.exports = {
     },
   },
   pwa: {
+    name: "Multiplications",
+    themeColor: "#000000",
+    msTileColor: "#000000",
     workboxOptions: {
       skipWaiting: true,
       clientsClaim: true,
