@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.bf484629b6cb59ea721521d9c1f7cf5b.js"
+  "/precache-manifest.ad23f1198ccfd0634af9e924fb55450a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lcs-tables-de-multiplication"});
