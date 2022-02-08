@@ -2,7 +2,7 @@
 
 exports[`Home.vue Should renders view 1`] = `
 <header>
-  <h1>multiplication</h1>
+  <h1>home.title</h1>
 </header>
 <main>
   <fieldset>
