@@ -15,8 +15,17 @@
       :class="{ 'operation--display-result': displayResult }"
       v-if="multiplication"
     >
-      {{ multiplication.table }}×{{ multiplication.factor
-      }}<span class="result">={{ multiplication.result }}</span>
+      <span aria-live="polite">
+        {{ multiplication.table }}×{{ multiplication.factor }}</span
+      ><span
+        class="result"
+        aria-live="polite"
+        :aria-label="
+          $t('multiplications.equal', { result: multiplication.result })
+        "
+        :style="{ visibility: displayResult ? 'visible' : 'hidden' }"
+        >={{ multiplication.result }}</span
+      >
     </div>
   </main>
 </template>

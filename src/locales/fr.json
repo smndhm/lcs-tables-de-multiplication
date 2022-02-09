@@ -1,8 +1,13 @@
 {
   "home": {
     "title": "Multiplications",
-    "legend": "Sélectionne la ou les table(s) que tu souhaites réviser&nbsp;:",
+    "legend": "Sélectionne la ou les table<span aria-hidden=\"true\">(s)</span> que tu souhaites réviser&nbsp;:",
+    "table": "Table de {table}",
+    "table-all": "Toutes les tables",
     "all": "Toutes",
     "start": "Commencer"
+  },
+  "multiplications": {
+    "equal": "Égal {result}"
   }
 }

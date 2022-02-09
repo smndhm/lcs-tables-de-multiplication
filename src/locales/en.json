@@ -1,8 +1,13 @@
 {
   "home": {
     "title": "Multiplications",
-    "legend": "Select the table(s) you would like to review:",
+    "legend": "Select the table<span aria-hidden=\"true\">(s)</span> you would like to review:",
+    "table": "Table of {table}",
+    "table-all": "All the tables",
     "all": "All",
     "start": "Start"
+  },
+  "multiplications": {
+    "equal": "Equal {result}"
   }
 }

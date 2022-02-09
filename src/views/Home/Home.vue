@@ -16,7 +16,9 @@
               name="table"
               @change="updateSelectedTables"
             />
-            <span>{{ table }}</span></label
+            <span :aria-label="$t('home.table', { table })">{{
+              table
+            }}</span></label
           >
         </li>
         <li>
@@ -27,7 +29,9 @@
               ref="table-all"
               @change="allSelected"
             />
-            <span>{{ $t("home.all") }}</span></label
+            <span :aria-label="$t('home.table-all')">{{
+              $t("home.all")
+            }}</span></label
           >
         </li>
       </ul>
